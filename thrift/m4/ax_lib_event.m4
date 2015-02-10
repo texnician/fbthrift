@@ -54,7 +54,7 @@ AC_DEFUN([AX_LIB_EVENT_DO_CHECK],
           fi
 
           # Required flag for libevent.
-          LIBEVENT_LIBS="-levent"
+          LIBEVENT_LIBS=`pkg-config --libs --static libevent`
 
           # Prepare the environment for compilation.
           CPPFLAGS="$CPPFLAGS $LIBEVENT_CPPFLAGS"
